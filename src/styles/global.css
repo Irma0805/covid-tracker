@@ -1,0 +1,232 @@
+/* ============================================
+   COVID TRACKER — ESTILOS GLOBALES
+   Este archivo define los colores, el reset
+   y la estructura base de TODA la app.
+   ============================================ */
+
+/* Importamos la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --------------------------------------------
+   VARIABLES DE COLORES
+   Se definen una vez aquí y se usan en toda
+   la app con var(--nombre-de-la-variable)
+   -------------------------------------------- */
+:root {
+  /* Colores principales */
+  --primary-blue: #2D3E8E;
+  --accent-purple: #4B59F7;
+  --aqua-clean: #00D2D3;
+  --warning-coral: #FF6B6B;
+  --bg-light: #F8F9FD;
+
+  /* Colores de datos COVID */
+  --color-cases: #FF3131;
+  --color-active: #FF6B35;
+  --color-recovered: #22B573;
+  --color-deaths: #2D3E8E;
+  --color-deaths-red: #E53535;
+  --color-cases-blue: #1E3A8A;
+  --color-new: #FF6B00;
+
+  /* Fondos de cards del sidebar */
+  --bg-card-total: #FFF0F0;
+  --bg-card-active: #FFF5EB;
+  --bg-card-recovered: #E8F8EF;
+  --bg-card-deaths: #F0F0F5;
+
+  /* Neutros */
+  --white: #FFFFFF;
+  --text-primary: #1A1A2E;
+  --text-secondary: #6B7280;
+  --border-color: #E5E7EB;
+
+  /* Tamaños del layout del dashboard */
+  --navbar-width: 64px;
+  --sidebar-width: 420px;
+}
+
+/* --------------------------------------------
+   RESET
+   Elimina los estilos por defecto del navegador
+   para que todos los navegadores se vean igual
+   -------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------
+   ESTILOS BASE DEL BODY
+   -------------------------------------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Quitamos los puntos de las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Los enlaces sin subrayado */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Las imágenes no se desbordan */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Los botones heredan la fuente */
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Los inputs heredan la fuente y tienen estilo base */
+input, select {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+  color: var(--text-primary);
+}
+
+input:focus, select:focus {
+  border-color: var(--accent-purple);
+}
+
+/* --------------------------------------------
+   LAYOUT DEL DASHBOARD
+   La estructura: IconNavbar | Sidebar | Content
+   -------------------------------------------- */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.icon-navbar {
+  width: var(--navbar-width);
+  min-height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  background-color: var(--white);
+  padding: 24px;
+  margin-left: var(--navbar-width);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: calc(var(--navbar-width) + var(--sidebar-width));
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------
+   ANIMACIÓN — ICONO GIRANDO
+   El enunciado dice que el icono del virus
+   en la navbar DEBE girar constantemente
+   -------------------------------------------- */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.navbar-icon-spin {
+  animation: spin 4s linear infinite;
+}
+
+/* --------------------------------------------
+   SCROLLBAR PERSONALIZADA
+   -------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 50px;
+}
+
+/* --------------------------------------------
+   RESPONSIVE — MOBILE (pantallas < 768px)
+   -------------------------------------------- */
+@media (max-width: 768px) {
+  .icon-navbar {
+    width: 100%;
+    min-height: auto;
+    height: 56px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 16px;
+    bottom: 0;
+    top: auto;
+    position: fixed;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    margin-left: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 16px;
+    padding-bottom: 72px;
+  }
+}
+
+/**************************************
+
+@import url(...) (línea 8) — Carga la fuente Poppins de Google. Es como decirle al navegador "descarga esta tipografía para que podamos usarla".
+:root { } (líneas 16-46) — Aquí definimos TODAS las variables de color del proyecto. :root significa "el nivel más alto del documento". Cualquier componente puede usar estos colores escribiendo var(--primary-blue). Si mañana el cliente quiere cambiar el azul, lo cambias AQUÍ una vez y se actualiza en toda la app.
+*, *::before, *::after { } (líneas 52-56) — El "reset". Los navegadores ponen márgenes y paddings por defecto que son diferentes entre Chrome, Firefox, etc. Con esto los eliminamos para que todo empiece igual. box-sizing: border-box hace que los paddings no aumenten el tamaño de los elementos.
+body { } (líneas 61-66) — Configuramos la fuente Poppins, el color de fondo (gris claro) y el color de texto base para toda la app.
+.app-layout, .icon-navbar, .sidebar, .main-content — Esta es la estructura del dashboard. Piénsalo como 3 columnas fijas: la navbar (64px), el sidebar (420px) y el contenido (el resto). Usamos position: fixed para que la navbar y el sidebar no se muevan al hacer scroll.
+@keyframes spin (líneas 118-121) — La animación de giro que pide el enunciado. Define que el icono rota de 0° a 360° infinitamente. Cualquier elemento con la clase navbar-icon-spin girará.
+@media (max-width: 768px) (líneas 138-160) — Los estilos para móvil. Cuando la pantalla es menor de 768px: la navbar se mueve abajo, el sidebar ocupa todo el ancho, y el contenido pierde los márgenes.
+
+********************************************/
