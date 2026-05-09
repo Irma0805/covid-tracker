@@ -1,0 +1,28 @@
+.symptom-section {
+    background-color: #eef2ff;
+    padding: 60px 40px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.symptom-subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.symptom-section h1 {
+    color: #1a1a4b;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    align-items: stretch;
+}
