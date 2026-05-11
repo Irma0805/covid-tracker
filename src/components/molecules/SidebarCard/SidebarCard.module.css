@@ -1,0 +1,46 @@
+.card {
+  border-radius: 8px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total { background-color: var(--bg-card-total); }
+.active { background-color: var(--bg-card-active); }
+.recovered { background-color: var(--bg-card-recovered); }
+.deaths { background-color: var(--bg-card-deaths); }
+
+.total:hover { border-color: var(--color-cases); }
+.active:hover { border-color: var(--color-active); }
+.recovered:hover { border-color: var(--color-recovered); }
+.deaths:hover { border-color: var(--primary-blue); }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.increment {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.value_total { color: var(--color-cases); }
+.value_active { color: var(--color-active); }
+.value_recovered { color: var(--color-recovered); }
+.value_deaths { color: var(--primary-blue); }
