@@ -1,6 +1,7 @@
 import styles from './HeroSection.module.css'
 import heroImg from'../../../assets/images/banner-right-image1.png'
 
+
 function HeroSection() {
   return (
     <section className={styles.hero}>
