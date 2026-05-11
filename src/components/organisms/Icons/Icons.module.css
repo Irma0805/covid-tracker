@@ -1,0 +1,38 @@
+.container{
+    position: absolute;
+    top: 500px;
+    left: 0px;
+}
+
+ ul li.circlered{
+background-color: #ff654f;
+background-image: url(../../../assets/images/icons/arrow.png);
+border-radius: 50%;
+width: 50px;
+height: 50px;
+padding: 0%;
+margin: 0%;
+}
+
+ ul li.circleblue{
+background-color: #00cecc;
+background-image: url(../../../assets/images/icons/helmets.png);
+border-radius: 50%;
+width: 50px;
+height: 50px;
+}
+
+ul li.circlegreen{
+background-color: #7ac552;
+background-image: url(../../../assets/images/icons/carts.png);
+border-radius: 50%;
+width: 50px;
+height: 50px;
+}
+
+
+
+p{
+    color: black;
+    
+}
