@@ -81,5 +81,3 @@ function Footer() {
 
 export default Footer
 
-/*fab significa "Font Awesome Brands" — la categoría de iconos de marcas/redes sociales. Cada fa-facebook-f, fa-twitter, etc. es un icono específico.
-*/
