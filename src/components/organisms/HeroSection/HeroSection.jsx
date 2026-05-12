@@ -21,7 +21,7 @@ function HeroSection() {
           <a href="#help">Help</a>
         </div>
 
-        <a href="/tracker-1" className={styles.trackerBtn}>
+        <a href="/tracker1" className={styles.trackerBtn}>
           Tracker
         </a>
       </nav>

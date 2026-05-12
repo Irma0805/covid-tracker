@@ -22,7 +22,7 @@ const CovidMap = () => {
         }
     }, [])
 
-    return <div ref={mapRef} style={{ height: '500px', width: '100%' }} />
+    return <div ref={mapRef} style={{ height: '400px', width: '100%' }} />
 }
 
 export default CovidMap

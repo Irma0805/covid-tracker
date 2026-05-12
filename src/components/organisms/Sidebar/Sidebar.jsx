@@ -27,7 +27,7 @@ useEffect(() => {
   if (loading) return <aside className="sidebar"><p>Cargando datos...</p></aside>
 
   return (
-    <aside className="sidebar">
+    <aside className="sidebar.sidebar">
       <h2 className={styles.title}>COVID-19 Tracker</h2>
 
       <div className={styles.cards}>

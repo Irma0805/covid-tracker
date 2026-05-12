@@ -1,3 +1,11 @@
+.sidebar {
+  width: 300px;
+  min-width: 300px;
+  padding: 24px;
+  background: white;
+  overflow-y: auto;
+}
+
 .title {
   font-size: 20px;
   font-weight: 700;
