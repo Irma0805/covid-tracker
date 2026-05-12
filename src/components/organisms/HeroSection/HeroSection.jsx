@@ -66,6 +66,18 @@ function HeroSection() {
 
       </div>
 
+      <div className={styles.socialSide}>
+  <a href="#" className={styles.socialBtn}>
+    <i className="fas fa-share-alt"></i>
+  </a>
+  <a href="#" className={styles.socialBtn}>
+    <i className="fas fa-phone"></i>
+  </a>
+  <a href="#" className={styles.socialBtn}>
+    <i className="fas fa-lock"></i>
+  </a>
+</div>
+
     </section>
   )
 }
