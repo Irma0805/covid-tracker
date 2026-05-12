@@ -1,14 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Tracker1 from './pages/Tracker1/Tracker1'
+import AppRouter from './router/AppRouter'
 
-function App () {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/tracker-1" element={<Tracker1 />} />
-    </Routes>
-  )
+function App() {
+  return <AppRouter />
 }
 
 export default App
