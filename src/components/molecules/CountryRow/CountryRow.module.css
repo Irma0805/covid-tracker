@@ -1,0 +1,42 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.15s ease;
+}
+
+.row:hover {
+  background-color: var(--bg-light);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  white-space: nowrap;      /* ← no parte el texto en dos líneas */
+  overflow: hidden;         /* ← esconde lo que no cabe */
+  text-overflow: ellipsis;  /* ← añade "..." al final */
+  max-width: 80px;          /* ← ancho máximo del nombre */
+}
+
+.cases {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}

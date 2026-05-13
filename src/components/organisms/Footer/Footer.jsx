@@ -1,6 +1,5 @@
 import styles from './Footer.module.css'
-import logoWhite from '../../../assets/images/logo-white.png'
-
+import Logo from '../../atoms/Logo/Logo'
 function Footer() {
     return (
         <footer className={styles.footer}>
@@ -8,9 +7,9 @@ function Footer() {
 
                 {/* Columna del logo */}
                 <div className={styles.brand}>
-                    <h3 className={styles.logo}>
-                        <img src={logoWhite} alt="COVIMAP" className={styles.logoImg} />
-                    </h3>
+                    <div className={styles.logoContainer}>
+                        <Logo />
+                    </div>
                     <p className={styles.brandText}>
                         These droplets can land on objects and surfaces around the person
                         such as tables, doorknobs and handrails.
@@ -81,5 +80,3 @@ function Footer() {
 
 export default Footer
 
-/*fab significa "Font Awesome Brands" — la categoría de iconos de marcas/redes sociales. Cada fa-facebook-f, fa-twitter, etc. es un icono específico.
-*/
