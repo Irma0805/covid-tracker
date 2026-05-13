@@ -16,24 +16,24 @@ function Tracker1() {
 
 
 
-function Tracker1 () {
-    return (
-    
-        
-    
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <CountrySelector onCountryChange={handleCountryChange} />
-                <span>Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div style={{ display: 'flex', gap: '20px' }}>
-                <CountryStats data={countryData} />
-                <CovidMap selectedCountry={selectedCountry} />
-            </div>
-            <CovidMap />
-          
-        </div>
-    )
-}
+  
+        return (
 
-export default Tracker1
+
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '20px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <CountrySelector onCountryChange={handleCountryChange} />
+                    <span>Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                </div>
+                <div style={{ display: 'flex', gap: '20px' }}>
+                    <CountryStats data={countryData} />
+                    <CovidMap selectedCountry={selectedCountry} />
+                </div>
+                
+
+            </div>
+        )
+    }
+
+    export default Tracker1
