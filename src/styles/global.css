@@ -144,12 +144,11 @@ input:focus, select:focus {
   min-height: 100vh;
   background-color: var(--white);
   padding: 24px;
-  margin-left: var(--navbar-width);
-  position: fixed;
-  left: 0;
-  top: 0;
   overflow-y: auto;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  box-shadow: 2px o 8px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
 }
 
 .main-content {

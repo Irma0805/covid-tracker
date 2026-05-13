@@ -1,0 +1,54 @@
+.globalBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background-color: var(--bg-light);
+  border-radius: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+@media (max-width: 768px) {
+  .globalBar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
