@@ -3,7 +3,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import axios from 'axios'
 
-const CovidMap = () => {
+const CovidMap = ({ selectedCountry }) => {
     const mapRef = useRef(null)
     const mapInstanceRef = useRef(null)
 
@@ -25,7 +25,7 @@ const CovidMap = () => {
                         color: 'red',
                         fillColor: '#f03',
                         fillOpacity: 0.4,
-                        radius: Math.sqrt(country.cases) * 50
+                        radius: Math.sqrt(country.cases) * 20
                     })
                     .bindPopup(`<b>${country.country}</b><br>Casos: ${country.cases.toLocaleString()}`)
                     .addTo(mapInstanceRef.current)
@@ -37,6 +37,16 @@ const CovidMap = () => {
             mapInstanceRef.current = null
         }
     }, [])
+
+    useEffect(() => {
+        if (!selectedCountry || !mapInstanceRef.current) return
+
+        axios.get(`https://disease.sh/v3/covid-19/countries/${selectedCountry}`)
+            .then(res => {
+                const { lat, long } = res.data.countryInfo
+                mapInstanceRef.current.setView([lat, long], 5)
+            })
+    }, [selectedCountry])
 
     return <div ref={mapRef} style={{ height: '400px', width: '100%' }} />
 }
