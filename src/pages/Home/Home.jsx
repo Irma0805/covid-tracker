@@ -3,6 +3,7 @@ import Icons from '../../components/organisms/Icons/Icons'
 import SymptomSection from '../../components/organisms/SymptomSection/SymptomSection'
 import Footer from '../../components/organisms/Footer/Footer'
 
+
 function Home () {
     return (
         <div>
@@ -10,6 +11,7 @@ function Home () {
            <Icons />
            <SymptomSection />
            <Footer />
+          
              
         </div>
 
