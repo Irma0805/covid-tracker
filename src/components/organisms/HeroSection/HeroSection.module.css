@@ -1,10 +1,34 @@
 /* El hero ocupa toda la pantalla con fondo degradado */
 .hero {
-  min-height: 100vh;
+  position: relative;
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
   color: var(--white);
   padding: 0 40px;
+  overflow: hidden;
 }
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/images/gb.png');
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: soft-light;
+  opacity: 0.4;    
+  z-index: 0;
+}
+
+.navbar,
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+
 
 /* --- NAVBAR --- */
 .navbar {
@@ -54,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 15px 0;
   gap: 40px;
 }
 
@@ -62,6 +86,7 @@
 .textSide {
   flex: 1;
   max-width: 550px;
+  padding-left: 50px;
 }
 
 .title {
@@ -92,7 +117,9 @@
 }
 
 .flag {
-  font-size: 28px;
+  width: 48px;
+  height: auto;
+  border-radius: 4px;
 }
 
 .counterNumber {
@@ -103,15 +130,74 @@
 
 /* Lado derecho: ilustración */
 .imageSide {
-  flex: 1;
+  flex: 0 0 420px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .heroImage {
-  max-width: 450px;
+  max-width: 320px;
   width: 100%;
+  max-height: 400px;
+  object-fit: contain;
 }
+
+.counterData {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+}
+
+.badgeGreen {
+  background-color: var(--color-recovered);
+  color: white;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.badgeBlue {
+  background-color: var(--color-cases-blue);
+  color: white;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.socialSide {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.socialBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--white);
+  background-color: var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.socialBtn:nth-child(1) { background-color: var(--color-active); }
+.socialBtn:nth-child(2) { background-color: var(--color-primary-blue);}
+.socialBtn:nth-child(3) { background-color: var(--color-recovered); }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
