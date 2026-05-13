@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    flex: 1;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.cases h3 { color: var(--color-cases); }
+.deaths h3 { color: var(--color-deaths-red); }
+.recovered h3 { color: var(--color-recovered); }
+.active h3 { color: var(--color-active); }
+.newCases h3 { color: var(--color-new); }
+.newDeaths h3 { color: var(--color-deaths-red); }
