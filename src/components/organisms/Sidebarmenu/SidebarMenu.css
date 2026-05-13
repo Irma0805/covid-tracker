@@ -1,0 +1,138 @@
+.navbarlateral {
+
+  color: var(--white);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  float: left;
+  background-color: #ffffff;
+  padding-left: 0%;
+  margin-left: 0%;
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 16px;
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--accent-purple);
+      }
+    }
+  }
+}
+
+.navbar-menu li {
+  width: 100px;
+  height: 77px;
+  display: block;
+  text-decoration: none;
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+
+}
+
+.btn {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.btn1 {
+  background-image: url("../../../assets/images/navbtn1.jpg");
+
+}
+
+.btn1:hover {
+  background-image: url("../../../assets/images/navbtnhover1.jpg");
+}
+
+.btn2 {
+  background-image: url("../../../assets/images/navbtn2.jpg");
+}
+
+.btn2:hover {
+  background-image: url("../../../assets/images/navbtnhover2.jpg");
+}
+
+.btn3 {
+  background-image: url("../../../assets/images/navbtn3.jpg");
+}
+
+.btn3:hover {
+  background-image: url("../../../assets/images/navbtnhover3.jpg");
+}
+
+.btn4 {
+  background-image: url("../../../assets/images/navbtn4.jpg");
+}
+
+.btn4:hover {
+  background-image: url("../../../assets/images/navbtnhover4.jpg");
+}
+
+.btn5 {
+  background-image: url("../../../assets/images/navbtn5.jpg");
+}
+
+.btn5:hover {
+  background-image: url("../../../assets/images/navbtnhover5.jpg");
+}
+
+.btn6 {
+  background-image: url("../../../assets/images/navbtn6.jpg");
+}
+
+.btn6:hover {
+  background-image: url("../../../assets/images/navbtnhover6.jpg");
+}
+
+.btn7 {
+  background-image: url("../../../assets/images/navbtn7.jpg");
+}
+
+.btn7:hover {
+  background-image: url("../../../assets/images/navbtnhover7.jpg");
+}
+
+.btn8 {
+  background-image: url("../../../assets/images/navbtn8.jpg");
+}
+
+.btn8:hover {
+  background-image: url("../../../assets/images/navbtnhover8.jpg");
+}
+
+.btn9 {
+  background-image: url("../../../assets/images/navbtn9.jpg");
+}
+
+.btn9:hover {
+  background-image: url("../../../assets/images/navbtnhover9.jpg");
+}
+
+.logo-menu {
+  display: block;
+  float: left;
+  margin-top: 0%;
+  padding-top: 0%;
+}
