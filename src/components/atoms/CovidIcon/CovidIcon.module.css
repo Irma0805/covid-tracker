@@ -7,3 +7,15 @@
     height: 95px;
     opacity: 0.15;
 }
+
+@keyframes iconRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.iconSpin {
+    animation: iconRotate 2s linear infinite;
+}
+
+
+

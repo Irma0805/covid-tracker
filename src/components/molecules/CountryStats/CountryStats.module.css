@@ -15,9 +15,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card:hover .icon {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    animation: iconRotate 2s linear infinite;
 }
 
 .card p {
@@ -51,3 +52,16 @@
 .newCases h3 { color: var(--color-new); }
 .newDeaths h3 { color: var(--color-deaths-red); }
 
+@keyframes iconRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.card:hover .icon {
+    animation: iconRotate 2s linear infinite;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
