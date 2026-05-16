@@ -10,8 +10,8 @@ function SidebarMenu() {
             <nav className="navbarlateral">
 
                 <ul className="navbar-menu">
-                    <li className="logo-menu"><img src="src/assets/images/coronavirus.png" alt="logo" width="50%" /></li>
-                    <li></li>
+                    <li className="logo-menu"><img src={logocoronavirus} alt="logo" width="50%" /></li>
+    
                     <li><a href="#track1" className="btn btn1"></a></li>
                     <li><a href="#track2" className="btn btn2"></a></li>
                     <li><a href="#track3" className="btn btn3"></a></li>
