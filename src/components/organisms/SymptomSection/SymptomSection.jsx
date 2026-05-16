@@ -2,7 +2,7 @@ import SymptomCard from "../../molecules/SymptomCard/SymptomCard";
 import achesIcon from "../../../assets/images/banner-right.png";
 import runnyNoseIcon from "../../../assets/images/cough.svg";
 import soreThroatIcon from "../../../assets/images/breathing.svg";
-import "./SymptomSection.css";
+import styles from "./SymptomSection.module.css";
 
 const SymptomSection = () => {
   const symptoms = [
@@ -27,10 +27,10 @@ const SymptomSection = () => {
   ];
 
   return (
-    <div className="symptom-section">
-      <p className="symptom-subtitle">Symptom</p>
-      <h1>Basic Symptom Against Corona virus</h1>
-      <div className="cards-container">
+    <div className={styles.symptomSection}>
+      <p className={styles.symptomSubtitle}>Symptom</p>
+      <h2>Basic Symptom Against Corona virus</h2>
+      <div className={styles.cardsContainer}>
         {symptoms.map((symptom) => (
           <SymptomCard
             key={symptom.title}
