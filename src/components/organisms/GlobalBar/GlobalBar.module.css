@@ -6,12 +6,17 @@
   padding: 20px 24px;
   background-color: var(--bg-light);
   border-radius: 12px;
+  border-top: 1px solid var(--border-color);
 }
 
 .card {
   display: flex;
   align-items: center;
   gap: 10px;
+  background-color: var(--white);
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
 }
 
 .cardText {
@@ -38,17 +43,22 @@
 @media (max-width: 768px) {
   .globalBar {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 16px;
   }
 
-  .value {
+  .card {
+    width: calc(50% - 8px);
+  }
+}
+
+ .value {
     font-size: 14px;
+  }
+
+  .label {
+    font-size: 10px;
   }
 
   .icon {
     width: 24px;
     height: 24px;
   }
-}

@@ -8,3 +8,14 @@
   flex: 1;
   overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
