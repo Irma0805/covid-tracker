@@ -13,8 +13,9 @@ const icons = {
     redark: covidRedark,
 }
 
-const CovidIcon = ({ color }) => {
-    return <img src={icons[color]} alt="covid icon" className={styles.icon} />
+const CovidIcon = ({ color, spin }) => {
+    return <img src={icons[color]} alt="covid icon" className={`${styles.icon} ${spin ? styles.iconSpin : ''}`} />
+    
 }
 
 export default CovidIcon
