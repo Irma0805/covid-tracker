@@ -1,16 +1,55 @@
-# React + Vite
+# COVID Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para el seguimiento de datos de COVID-19 en tiempo real por país y a nivel global.
 
-Currently, two official plugins are available:
+## Equipo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Proyecto desarrollado por 4 personas en el bootcamp FemCoders.
 
-## React Compiler
+👩 Irma Ortiz 👩 Carmen Lareo 👩Kharla Quevedo 👩 Lia Fernández
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite**
+- **React Router DOM** — navegación entre páginas
+- **Leaflet** + **React Leaflet** — mapa interactivo con círculos por país
+- **Axios** — llamadas a la API
+- **CSS Modules** — estilos encapsulados por componente
+- **disease.sh API** — datos de COVID-19 en tiempo real
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+- Mapa mundial interactivo con círculos proporcionales a los casos por país
+- Selector de país con estadísticas detalladas (casos, muertes, recuperados, activos)
+- Barra global con totales mundiales
+- Top 10 países con más casos
+- Sección de síntomas
+- Iconos animados al hacer hover en las tarjetas
+
+## Estructura del proyecto
+
+```
+src/
+├── assets/          # Imágenes e iconos SVG
+├── components/
+│   ├── atoms/       # CovidIcon, Logo
+│   ├── molecules/   # CountryStats, CountrySelector, CountryRow, SymptomCard
+│   ├── organisms/   # CovidMap, Sidebar, GlobalBar, SymptomSection
+│   └── templates/   # Layout
+├── pages/           # Home, Tracker1, Tracker3
+├── router/          # AppRouter
+├── services/        # Llamadas a la API
+└── styles/          # global.css con variables y reset
+```
+
+## Instalación
+
+```bash
+npm install
+npm run dev
+```
+
+## API utilizada
+
+[disease.sh](https://disease.sh) — API pública de datos COVID-19.
+
