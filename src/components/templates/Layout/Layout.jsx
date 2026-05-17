@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../../organisms/Sidebar/Sidebar'
 import styles from './Layout.module.css'
-import SidebarMenu from '../../organisms/SidebarMenu/SidebarMenu'
+import SidebarMenu from '../../organisms/Sidebarmenu/Sidebarmenu'
 
 function Layout() {
   return (
